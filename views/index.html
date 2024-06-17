@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Мотоциклетный Завод</title>
+        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    </head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <section class="hero">
+            <h1>Добро пожаловать    </h1>
+            <p>Мы предлагаем лучшие мотоциклы для вас.</p>
+            <button class="primary-button" onclick="window.location.href='/catalog'">Перейти в каталог</button>
+        </section>
+
+        <section class="about">
+            <h2>О нас</h2>
+            <p>Добро пожаловать на официальный сайт нашего мотоциклетного завода! Мы специализируемся на производстве высококачественных мотоциклов, которые завоевали доверие и признание по всему миру.</p>
+            <p>Наш завод располагается в самом сердце России, где мы создаем надежные, современные и инновационные мотоциклы. Мы гордимся своим многолетним опытом и постоянным стремлением к совершенству.</p>
+            <p>Наши основные ценности:</p>
+            <ul>
+                <li><strong>Качество:</strong> Мы стремимся к безупречному качеству на каждом этапе производства, чтобы наши мотоциклы соответствовали самым высоким стандартам.</li>
+                <li><strong>Инновации:</strong> Внедрение новейших технологий и разработок позволяет нам создавать мотоциклы, которые всегда находятся на передовой.</li>
+                <li><strong>Надежность:</strong> Наши мотоциклы рассчитаны на долгий срок службы и бесперебойную работу в любых условиях.</li>
+                <li><strong>Удовлетворение клиентов:</strong> Мы учитываем потребности наших клиентов и предоставляем лучший сервис и поддержку.</li>
+            </ul>
+            <p>Ассортимент нашей продукции включает:</p>
+            <ul>
+                <li>Супербайки - для любителей скорости и адреналина.</li>
+                <li>Туристические мотоциклы - для комфортных дальних поездок.</li>
+                <li>Городские мотоциклы - для удобных перемещений по городу.</li>
+                <li>Кроссовые мотоциклы - для экстремальных условий и бездорожья.</li>
+            </ul>
+            <p>Спасибо, что выбрали наш завод! Мы ценим ваше доверие и стремимся оправдать его, предлагая вам лучшие мотоциклы и обслуживание.</p>
+        </section>
+        
+
+        <section class="popular-products">
+            <h2>Популярные товары</h2>
+            <div id="popularProductList" class="product-list"></div>
+        </section>
+
+        <section class="reviews">
+            <h2>Отзывы</h2>
+            <div class="swiper-container review-slider" id="reviewsList">
+                <div class="swiper-wrapper">
+                    <!-- Слайды будут добавлены динамически -->
+                </div>
+                <!-- Добавьте навигационные элементы -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <button class="primary-button" id="leaveReviewButton">Оставить отзыв</button>
+        </section>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeProductModal">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+    <!-- Модальное окно для оставления отзыва -->
+    <div id="reviewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeReviewModal">&times;</span>
+            <h2>Оставить отзыв</h2>
+            <form id="reviewForm">
+                <label for="reviewText">Ваш отзыв:</label>
+                <textarea id="reviewText" name="review" required></textarea>
+                <button class="primary-button" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно для авторизации -->
+    <div id="loginPromptModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeLoginPromptModal">&times;</span>
+            <h2>Вход</h2>
+            <p>Пожалуйста, войдите, чтобы оставить отзыв.</p>
+            <button class="auth-buttons" id="loginButton">Войти</button>
+        </div>
+    </div>
+    
+    <div id="loginModal-container"></div>
+    <div id="registerModal-container"></div>
+    <footer>
+        <p>&copy; 2024 Мотоциклетный Завод. Все права защищены.</p>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <script src="/js/main.js" defer></script>
+    
+    <script>
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/profile.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <h2>Профиль пользователя</h2>
+        <div id="profileContainer">
+            <p><strong>Имя пользователя:</strong> <span id="profileUsername"></span></p>
+            <form id="profileForm">
+                <label for="profileFirstName">Имя:</label>
+                <input type="text" id="profileFirstName" name="first_name" required>
+                
+                <label for="profileLastName">Фамилия:</label>
+                <input type="text" id="profileLastName" name="last_name" required>
+                
+                <label for="profilePhoneNumber">Номер телефона:</label>
+                <input type="text" id="profilePhoneNumber" name="phone_number" required>
+                
+                <label for="profileEmail">Электронная почта:</label>
+                <input type="email" id="profileEmail" name="email" required>
+                
+                <button type="submit">Обновить профиль</button>
+            </form>
+            <button id="logoutButton">Выйти из аккаунта</button>
+        </div>
+
+        <h2>Мои заказы</h2>
+        <div id="orderList" class="order-list"></div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="/js/scripts.js"></script>
+    <script src="/js/profile.js" defer></script>
+</body>
+</html>

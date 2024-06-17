@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/catalog.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <h2>Каталог товаров</h2>
+        <div class="filters">
+            <select id="brandFilter">
+                <option value="">Все бренды</option>
+            </select>
+            <select id="engineTypeFilter">
+                <option value="">Все типы двигателей</option>
+            </select>
+            <select id="fuelTypeFilter">
+                <option value="">Все типы топлива</option>
+            </select>
+            <button onclick="applyFilters()">Применить фильтры</button>
+        </div>
+        <div id="productCatalog" class="product-catalog"></div>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeProductModal">&times;</span>
+            <div id="productDetails"></div>
+        </div>
+    </div>
+    <div id="loginModal-container"></div>
+    <div id="registerModal-container"></div>
+    <div id="footer-container"></div>
+
+    <script src="/js/catalog.js" defer></script>
+    <script src="/js/scripts.js" defer></script>
+</body>
+</html>

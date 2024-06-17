@@ -1,0 +1,13 @@
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeLoginModal">&times;</span>
+        <h2>Вход</h2>
+        <form id="loginForm" action="/auth/login" method="POST">
+            <label for="loginUsername">Имя пользователя:</label>
+            <input type="text" id="loginUsername" name="username" required>
+            <label for="loginPassword">Пароль:</label>
+            <input type="password" id="loginPassword" name="password" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</div>

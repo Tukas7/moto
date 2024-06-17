@@ -1,0 +1,64 @@
+main {
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Стили фильтров */
+.filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.filters select, .filters button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+.filters button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили каталога товаров */
+.product-catalog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: rgb(80, 71, 71);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product-details {
+    padding: 10px 0;
+}
+
+.product-details h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.product-details p {
+    margin: 5px 0;
+   
+}
+

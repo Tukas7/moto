@@ -1,0 +1,27 @@
+<div id="registerModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeRegisterModal">&times;</span>
+        <h2>Регистрация</h2>
+        <form id="registerForm" action="/auth/register" method="POST">
+            <label for="registerUsername">Имя пользователя:</label>
+            <input type="text" id="registerUsername" name="username" required>
+            
+            <label for="registerPassword">Пароль:</label>
+            <input type="password" id="registerPassword" name="password" required>
+            
+            <label for="registerFirstName">Имя:</label>
+            <input type="text" id="registerFirstName" name="first_name" required>
+            
+            <label for="registerLastName">Фамилия:</label>
+            <input type="text" id="registerLastName" name="last_name" required>
+            
+            <label for="registerPhoneNumber">Номер телефона:</label>
+            <input type="text" id="registerPhoneNumber" name="phone_number" required>
+            
+            <label for="registerEmail">Электронная почта:</label>
+            <input type="email" id="registerEmail" name="email" required>
+            
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+</div>

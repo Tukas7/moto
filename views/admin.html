@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Административная панель</title>
+    <link rel="stylesheet" href="/css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/admin.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.png" alt="Логотип завода">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/admin">Админка</a></li>
+                <li><a href="/auth/logout">Выход</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Управление товарами</h2>
+            <form id="productForm">
+                <label for="productName">Название:</label>
+                <input type="text" id="productName" name="name" required>
+                <label for="productDescription">Описание:</label>
+                <textarea id="productDescription" name="description" required></textarea>
+                <label for="productPrice">Цена:</label>
+                <input type="number" id="productPrice" name="price" required>
+                <label for="productImage">Изображение:</label>
+                <input type="file" id="productImage" name="image">
+                <label for="productBrand">Бренд:</label>
+                <select id="productBrand" name="brand_id"></select>
+                <label for="productModelYear">Год модели:</label>
+                <input type="number" id="productModelYear" name="modelYear">
+                <label for="productEngineType">Тип двигателя:</label>
+                <select id="productEngineType" name="engine_type_id"></select>
+                <label for="productEngineCapacity">Объем двигателя:</label>
+                <input type="number" id="productEngineCapacity" name="engineCapacity">
+                <label for="productHorsepower">Лошадиные силы:</label>
+                <input type="number" id="productHorsepower" name="horsepower">
+                <label for="productTorque">Крутящий момент:</label>
+                <input type="number" id="productTorque" name="torque">
+                <label for="productFuelType">Тип топлива:</label>
+                <select id="productFuelType" name="fuel_type_id"></select>
+                <label for="productWeight">Вес:</label>
+                <input type="number" id="productWeight" name="weight">
+                <label for="productTopSpeed">Максимальная скорость:</label>
+                <input type="number" id="productTopSpeed" name="topSpeed">
+                <label for="productAccelerationTime">Время разгона (0-100 км/ч):</label>
+                <input type="number" step="0.1" id="productAccelerationTime" name="accelerationTime">
+                <label for="stockQuantity">Количество на складе:</label>
+                <input type="number" id="stockQuantity" name="stockQuantity" required>
+                <label for="productIsPopular">Популярный товар:</label>
+                <input type="checkbox" id="productIsPopular" name="is_popular">
+                <button type="submit">Добавить товар</button>
+            </form>
+            <div id="productList" class="product-list"></div>
+        </section>
+
+        <section class="container">
+            <h2>Управление заказами</h2>
+            <div id="orderList"></div>
+        </section>
+
+        <section class="container">
+            <h2>Управление отзывами</h2>
+            <div id="reviewList" class="review-list"></div>
+        </section>
+        <section class="container">
+            <h2>Статистика завершенных заказов</h2>
+            <canvas id="statsCanvas" width="400" height="200"></canvas>
+        </section>
+    </main>
+
+    
+
+        
+
+    <!-- Модальное окно для редактирования товара -->
+    <div id="editProductModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEditProductModal">&times;</span>
+            <h2>Редактирование товара</h2>
+            <form id="editProductForm">
+                <label for="editProductName">Название:</label>
+                <input type="text" id="editProductName" name="name" required>
+                <label for="editProductDescription">Описание:</label>
+                <textarea id="editProductDescription" name="description" required></textarea>
+                <label for="editProductPrice">Цена:</label>
+                <input type="number" id="editProductPrice" name="price" required>
+                <label for="editProductImage">Изображение:</label>
+                <input type="file" id="editProductImage" name="image">
+                <label for="editProductBrand">Бренд:</label>
+                <select id="editProductBrand" name="brand"></select>
+                <label for="editProductModelYear">Год модели:</label>
+                <input type="number" id="editProductModelYear" name="modelYear">
+                <label for="editProductEngineType">Тип двигателя:</label>
+                <select id="editProductEngineType" name="engineType"></select>
+                <label for="editProductEngineCapacity">Объем двигателя:</label>
+                <input type="number" id="editProductEngineCapacity" name="engineCapacity">
+                <label for="editProductHorsepower">Лошадиные силы:</label>
+                <input type="number" id="editProductHorsepower" name="horsepower">
+                <label for="editProductTorque">Крутящий момент:</label>
+                <input type="number" id="editProductTorque" name="torque">
+                <label for="editProductFuelType">Тип топлива:</label>
+                <select id="editProductFuelType" name="fuelType"></select>
+                <label for="editProductWeight">Вес:</label>
+                <input type="number" id="editProductWeight" name="weight">
+                <label for="editProductTopSpeed">Максимальная скорость:</label>
+                <input type="number" id="editProductTopSpeed" name="topSpeed">
+                <label for="editProductAccelerationTime">Время разгона (0-100 км/ч):</label>
+                <input type="number" step="0.1" id="editProductAccelerationTime" name="accelerationTime">
+                <label for="editStockQuantity">Количество на складе:</label>
+                <input type="number" id="editStockQuantity" name="stockQuantity" required>
+                <button type="submit">Обновить товар</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Мотоциклетный Завод. Все права защищены.</p>
+    </footer>
+</body>
+</html>
